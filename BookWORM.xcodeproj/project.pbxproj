@@ -17,6 +17,9 @@
 		DEE41FE22A7C07020047F18C /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE41FE02A7C07020047F18C /* BookCollectionViewCell.xib */; };
 		DEE41FE42A7C07E40047F18C /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE32A7C07E40047F18C /* MovieInfo.swift */; };
 		DEE41FE62A7C08160047F18C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE52A7C08160047F18C /* Movie.swift */; };
+		DEE41FE82A7C21750047F18C /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */; };
+		DEE41FEC2A7C23B40047F18C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FEB2A7C23B40047F18C /* SearchViewController.swift */; };
+		DEE41FEE2A7C276D0047F18C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FED2A7C276D0047F18C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		DEE41FE02A7C07020047F18C /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
 		DEE41FE32A7C07E40047F18C /* MovieInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieInfo.swift; path = ../../../Week02/MovieInfo.swift; sourceTree = "<group>"; };
 		DEE41FE52A7C08160047F18C /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = ../../BOOKWARM/Movie.swift; sourceTree = "<group>"; };
+		DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		DEE41FEB2A7C23B40047F18C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DEE41FED2A7C276D0047F18C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,9 @@
 				DEE41FC92A7C05240047F18C /* AppDelegate.swift */,
 				DEE41FCB2A7C05240047F18C /* SceneDelegate.swift */,
 				DEE41FCF2A7C05240047F18C /* Main.storyboard */,
+				DEE41FED2A7C276D0047F18C /* DetailViewController.swift */,
+				DEE41FEB2A7C23B40047F18C /* SearchViewController.swift */,
+				DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */,
 				DEE41FDF2A7C07020047F18C /* BookCollectionViewCell.swift */,
 				DEE41FE02A7C07020047F18C /* BookCollectionViewCell.xib */,
 				DEE41FDD2A7C06180047F18C /* BookWormCollectionViewController.swift */,
@@ -151,8 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE41FEE2A7C276D0047F18C /* DetailViewController.swift in Sources */,
 				DEE41FCA2A7C05240047F18C /* AppDelegate.swift in Sources */,
 				DEE41FE42A7C07E40047F18C /* MovieInfo.swift in Sources */,
+				DEE41FE82A7C21750047F18C /* DiscoverViewController.swift in Sources */,
+				DEE41FEC2A7C23B40047F18C /* SearchViewController.swift in Sources */,
 				DEE41FE62A7C08160047F18C /* Movie.swift in Sources */,
 				DEE41FE12A7C07020047F18C /* BookCollectionViewCell.swift in Sources */,
 				DEE41FCC2A7C05240047F18C /* SceneDelegate.swift in Sources */,

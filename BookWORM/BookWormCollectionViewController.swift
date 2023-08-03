@@ -27,15 +27,25 @@ class BookWormCollectionViewController: UICollectionViewController {
         
     }
 
+    @IBAction func searchButtonClicked(_ sender: UIBarButtonItem) {
+
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true)
+        
+    }
+    
+    
     func setCollectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
         
         let spacing:CGFloat = 16
         let width = UIScreen.main.bounds.width - (spacing * 3)
         
-        guard let tabBarHeight = self.tabBarController?.tabBar.frame.height else { return }
-        guard let naviHeight = self.navigationController?.navigationBar.frame.height else { return }
-        let height = UIScreen.main.bounds.height - tabBarHeight - naviHeight - (spacing * 4)
+        
+        let height = UIScreen.main.bounds.height - (spacing * 4)
         
         layout.itemSize = CGSize(width: width / 2, height: height / 3)
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
@@ -66,6 +76,14 @@ class BookWormCollectionViewController: UICollectionViewController {
     
     @objc func likeButtonClicked(_ sender: UIButton) {
         movie.list[sender.tag].like.toggle()
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+
+        vc.movieData = movie.list[indexPath.item]
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

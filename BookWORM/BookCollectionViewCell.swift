@@ -22,6 +22,7 @@ class BookCollectionViewCell: UICollectionViewCell {
         
         setCell()
         setNameLabel()
+        setPoster()
         setRateLabel()
         
     }
@@ -48,6 +49,10 @@ class BookCollectionViewCell: UICollectionViewCell {
         nameLabel.textAlignment = .right
     }
     
+    func setPoster() {
+        posterImageView.contentMode = .scaleAspectFill
+        posterImageView.layer.cornerRadius = 10
+    }
     
     func setRateLabel() {
         rateLabel.textColor = .white
