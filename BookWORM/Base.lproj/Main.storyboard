@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Book Worm Collection View Controller-->
+        <!--채원님의 책장-->
         <scene sceneID="CvB-BE-SGh">
             <objects>
                 <collectionViewController storyboardIdentifier="BookWormCollectionViewController" id="j3k-Re-XqG" customClass="BookWormCollectionViewController" customModule="BookWORM" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,11 @@
                             <outlet property="delegate" destination="j3k-Re-XqG" id="QyO-6t-NxU"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="8EC-du-gmY"/>
+                    <navigationItem key="navigationItem" title="채원님의 책장" id="8EC-du-gmY">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="2t6-Tm-1XT">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47w-kJ-W32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,6 +86,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
