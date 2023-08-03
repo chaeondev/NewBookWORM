@@ -31,6 +31,7 @@ class BookWormCollectionViewController: UICollectionViewController {
 
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true)

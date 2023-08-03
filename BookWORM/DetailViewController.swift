@@ -7,7 +7,19 @@
 
 import UIKit
 
+enum TransitionType {
+    case collection
+    case search
+    case discover
+}
+
 class DetailViewController: UIViewController {
+    
+    static let identifier = "DetailViewController"
+    
+    var movieData: Movie?
+    
+    var type: TransitionType = .collection
 
     @IBOutlet var detailPosterImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
@@ -15,10 +27,6 @@ class DetailViewController: UIViewController {
     @IBOutlet var rateLabel: UILabel!
     @IBOutlet var storyLabel: UILabel!
     
-    
-    
-    
-    var movieData: Movie?
     
     override func viewDidLoad() {
         super.viewDidLoad()

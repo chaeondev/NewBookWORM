@@ -20,6 +20,8 @@
 		DEE41FE82A7C21750047F18C /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */; };
 		DEE41FEC2A7C23B40047F18C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FEB2A7C23B40047F18C /* SearchViewController.swift */; };
 		DEE41FEE2A7C276D0047F18C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FED2A7C276D0047F18C /* DetailViewController.swift */; };
+		DEE41FF32A7C3A850047F18C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FF12A7C3A850047F18C /* SearchTableViewCell.swift */; };
+		DEE41FF42A7C3A850047F18C /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE41FF22A7C3A850047F18C /* SearchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		DEE41FEB2A7C23B40047F18C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DEE41FED2A7C276D0047F18C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DEE41FF12A7C3A850047F18C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		DEE41FF22A7C3A850047F18C /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				DEE41FC92A7C05240047F18C /* AppDelegate.swift */,
 				DEE41FCB2A7C05240047F18C /* SceneDelegate.swift */,
 				DEE41FCF2A7C05240047F18C /* Main.storyboard */,
+				DEE41FF12A7C3A850047F18C /* SearchTableViewCell.swift */,
+				DEE41FF22A7C3A850047F18C /* SearchTableViewCell.xib */,
 				DEE41FED2A7C276D0047F18C /* DetailViewController.swift */,
 				DEE41FEB2A7C23B40047F18C /* SearchViewController.swift */,
 				DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */,
@@ -150,6 +156,7 @@
 				DEE41FE22A7C07020047F18C /* BookCollectionViewCell.xib in Resources */,
 				DEE41FD32A7C05250047F18C /* Assets.xcassets in Resources */,
 				DEE41FD12A7C05240047F18C /* Main.storyboard in Resources */,
+				DEE41FF42A7C3A850047F18C /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +176,7 @@
 				DEE41FE12A7C07020047F18C /* BookCollectionViewCell.swift in Sources */,
 				DEE41FCC2A7C05240047F18C /* SceneDelegate.swift in Sources */,
 				DEE41FDE2A7C06180047F18C /* BookWormCollectionViewController.swift in Sources */,
+				DEE41FF32A7C3A850047F18C /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
