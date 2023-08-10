@@ -35,7 +35,6 @@ class SearchTableViewCell: UITableViewCell {
         authorLabel.textColor = .systemGray6
         authorLabel.font = .systemFont(ofSize: 13)
         
-        contentsLabel.textAlignment = .center
         contentsLabel.font = .systemFont(ofSize: 11)
         contentsLabel.numberOfLines = 0
         contentsLabel.textColor = .white

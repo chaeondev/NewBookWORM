@@ -28,6 +28,7 @@ class SearchViewController: UIViewController {
         mediaSearchBar.delegate = self
         resultTableView.delegate = self
         resultTableView.dataSource = self
+        resultTableView.prefetchDataSource = self
         
         title = "검색"
         
@@ -42,8 +43,6 @@ class SearchViewController: UIViewController {
         resultTableView.register(nib, forCellReuseIdentifier: SearchTableViewCell.identifier)
         
         resultTableView.rowHeight = 150
-        
-        callRequest(query: "아이", page: 1)
         
         
     }
@@ -66,6 +65,8 @@ class SearchViewController: UIViewController {
                 let json = JSON(value)
                 print("JSON: \(json)")
                 
+                self.isEnd = json["meta"]["is_end"].boolValue
+                
                 for item in json["documents"].arrayValue {
                     let bookName = item["title"].stringValue
                     let bookStory = item["contents"].stringValue
@@ -79,6 +80,7 @@ class SearchViewController: UIViewController {
                     self.bookList.append(data)
                 }
                 self.resultTableView.reloadData()
+
                 
             case .failure(let error):
                 print(error)
@@ -88,7 +90,8 @@ class SearchViewController: UIViewController {
     
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookList.count
     }
@@ -106,6 +109,16 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        for indexPath in indexPaths {
+            if bookList.count - 1 == indexPath.row && page < 50 && !isEnd {
+                page += 1
+                callRequest(query: mediaSearchBar.text!, page: page)
+            }
+        }
+    }
+    
 /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
