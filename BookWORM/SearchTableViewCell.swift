@@ -13,13 +13,32 @@ class SearchTableViewCell: UITableViewCell {
 
     @IBOutlet var posterImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var authorLabel: UILabel!
+    @IBOutlet var contentsLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = .darkGray
-        self.titleLabel.textColor = .white
+        designCell()
         
     }
 
-    
+    func designCell() {
+        
+        self.backgroundColor = .darkGray
+        
+        titleLabel.textColor = .white
+        titleLabel.font = .boldSystemFont(ofSize: 15)
+        
+        posterImageView.contentMode = .scaleAspectFit
+        
+        authorLabel.textAlignment = .right
+        authorLabel.textColor = .systemGray6
+        authorLabel.font = .systemFont(ofSize: 13)
+        
+        contentsLabel.textAlignment = .center
+        contentsLabel.font = .systemFont(ofSize: 11)
+        contentsLabel.numberOfLines = 0
+        contentsLabel.textColor = .white
+        
+    }
 }
