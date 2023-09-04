@@ -14,7 +14,7 @@ enum Constants {
         static let border = UIColor(red: 16/255, green: 44/255, blue: 87/255, alpha: 1.0).cgColor
         static let text = UIColor(red: 16/255, green: 44/255, blue: 87/255, alpha: 1.0)
         static let placeholder = UIColor(red:218/255, green: 192/255, blue: 163/255, alpha: 1.0)
-        static let point = UIColor(red: 213/255, green: 255/255, blue: 208/255, alpha: 1.0)
+        static let point = UIColor(red: 1/255, green: 106/255, blue: 112/255, alpha: 1.0)
         
     }
 }

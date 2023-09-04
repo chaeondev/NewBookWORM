@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import RealmSwift
 
 class HomeViewController: BaseViewController {
     
@@ -19,18 +20,31 @@ class HomeViewController: BaseViewController {
         return view
     }()
     
+    var books: Results<MyBook>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "My BookShelf"
         navigationController?.navigationBar.tintColor = Constants.BaseColor.text
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchButtonClicked))
         navigationItem.rightBarButtonItem?.tintColor = Constants.BaseColor.text
+        
+        let realm = try! Realm()
+        let myBooks = realm.objects(MyBook.self).sorted(byKeyPath: "title", ascending: true)
+        books = myBooks
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        collectionView.reloadData()
     }
     
     @objc func searchButtonClicked() {
         let vc = SearchViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true)
     }
     
     override func configure() {
@@ -50,11 +64,19 @@ class HomeViewController: BaseViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return books.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewBookCollectionViewCell.reuseIdentifier, for: indexPath) as? NewBookCollectionViewCell else { return UICollectionViewCell() }
+        
+        let data = books[indexPath.item]
+        
+        cell.titleLabel.text = data.title
+        cell.authorLabel.text = data.author
+        if let url = URL(string: data.coverURL!) {
+            cell.bookImage.kf.setImage(with: url)
+        }
         return cell
     }
     
@@ -66,7 +88,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         let size = UIScreen.main.bounds.width - (spacing * 4)
         let width = size / 3
-        let height = width * 1.7
+        let height = width * 1.8
         layout.itemSize = CGSize(width: width, height: height)
         
         return layout

@@ -11,27 +11,23 @@ class NewBookCollectionViewCell: BaseCollectionViewCell {
     
     let bookImage = {
         let view = PhotoImageView(frame: .zero)
-        view.backgroundColor = .brown
         return view
     }()
     
     let infoView = {
         let view = UIView()
-        view.backgroundColor = .green
         return view
     }()
     
     let titleLabel = {
         let view = CustomLabel()
-        view.backgroundColor = .cyan
-        view.font = .systemFont(ofSize: 12, weight: .semibold)
+        view.font = .systemFont(ofSize: 10, weight: .semibold)
         return view
     }()
     
     let authorLabel = {
         let view = CustomLabel()
-        view.backgroundColor = .gray
-        view.font = .systemFont(ofSize: 10)
+        view.font = .systemFont(ofSize: 9)
         return view
     }()
     
@@ -64,7 +60,7 @@ class NewBookCollectionViewCell: BaseCollectionViewCell {
         
         titleLabel.snp.makeConstraints { make in
             make.top.leading.equalToSuperview().inset(4)
-            make.trailing.greaterThanOrEqualToSuperview().inset(4)
+            make.trailing.lessThanOrEqualToSuperview().inset(4)
             make.height.equalToSuperview().multipliedBy(0.5)
         }
         authorLabel.snp.makeConstraints { make in

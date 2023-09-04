@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SearchViewController: BaseViewController {
     
@@ -24,6 +25,7 @@ class SearchViewController: BaseViewController {
         view.delegate = self
         view.dataSource = self
         view.prefetchDataSource = self
+        view.keyboardDismissMode = .onDrag
         return view
     }()
     
@@ -33,6 +35,11 @@ class SearchViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Search Books"
+        
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.tintColor = Constants.BaseColor.text
         
         let xmark = UIImage(systemName: "xmark")
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: xmark, style: .plain, target: self, action: #selector(closeButtonClicked))
@@ -89,6 +96,16 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITa
                     print(data)
                 }
             }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let realm = try! Realm()
+        
+        let data = MyBook(title: bookList.documents[indexPath.row].title, author: bookList.documents[indexPath.row].authors.joined(separator: " , "), coverURL: bookList.documents[indexPath.row].thumbnail, like: false)
+        
+        try! realm.write {
+            realm.add(data)
         }
     }
     
