@@ -30,6 +30,8 @@
 		DE0B672E2AA5E39600A91FE8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B672D2AA5E39600A91FE8 /* APIService.swift */; };
 		DE0B67322AA5E5DE00A91FE8 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B67312AA5E5DE00A91FE8 /* Book.swift */; };
 		DE0B67342AA5F5D400A91FE8 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B67332AA5F5D400A91FE8 /* RealmModel.swift */; };
+		DE0B67372AA5FD7E00A91FE8 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B67362AA5FD7E00A91FE8 /* MovieInfo.swift */; };
+		DE0B673B2AA5FD8800A91FE8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B67382AA5FD8800A91FE8 /* Movie.swift */; };
 		DEE41FCA2A7C05240047F18C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FC92A7C05240047F18C /* AppDelegate.swift */; };
 		DEE41FCC2A7C05240047F18C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FCB2A7C05240047F18C /* SceneDelegate.swift */; };
 		DEE41FD12A7C05240047F18C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE41FCF2A7C05240047F18C /* Main.storyboard */; };
@@ -37,8 +39,6 @@
 		DEE41FD62A7C05250047F18C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE41FD42A7C05250047F18C /* LaunchScreen.storyboard */; };
 		DEE41FDE2A7C06180047F18C /* BookWormCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FDD2A7C06180047F18C /* BookWormCollectionViewController.swift */; };
 		DEE41FE22A7C07020047F18C /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE41FE02A7C07020047F18C /* BookCollectionViewCell.xib */; };
-		DEE41FE42A7C07E40047F18C /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE32A7C07E40047F18C /* MovieInfo.swift */; };
-		DEE41FE62A7C08160047F18C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE52A7C08160047F18C /* Movie.swift */; };
 		DEE41FE82A7C21750047F18C /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */; };
 		DEE41FEC2A7C23B40047F18C /* SearchViewControllerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FEB2A7C23B40047F18C /* SearchViewControllerOld.swift */; };
 		DEE41FEE2A7C276D0047F18C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FED2A7C276D0047F18C /* DetailViewController.swift */; };
@@ -64,6 +64,8 @@
 		DE0B672D2AA5E39600A91FE8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DE0B67312AA5E5DE00A91FE8 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		DE0B67332AA5F5D400A91FE8 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		DE0B67362AA5FD7E00A91FE8 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
+		DE0B67382AA5FD8800A91FE8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		DEE41FC62A7C05240047F18C /* BookWORM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookWORM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE41FC92A7C05240047F18C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEE41FCB2A7C05240047F18C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,8 +75,6 @@
 		DEE41FD72A7C05250047F18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEE41FDD2A7C06180047F18C /* BookWormCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookWormCollectionViewController.swift; sourceTree = "<group>"; };
 		DEE41FE02A7C07020047F18C /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
-		DEE41FE32A7C07E40047F18C /* MovieInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieInfo.swift; path = ../../../Week02/MovieInfo.swift; sourceTree = "<group>"; };
-		DEE41FE52A7C08160047F18C /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = ../../BOOKWARM/Movie.swift; sourceTree = "<group>"; };
 		DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		DEE41FEB2A7C23B40047F18C /* SearchViewControllerOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerOld.swift; sourceTree = "<group>"; };
 		DEE41FED2A7C276D0047F18C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +102,7 @@
 		DE0B66F52AA5A0AB00A91FE8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DE0AFAE32A84EFA20058BF41 /* APIKey.swift */,
 				DE0B672D2AA5E39600A91FE8 /* APIService.swift */,
 				DE0B67312AA5E5DE00A91FE8 /* Book.swift */,
 			);
@@ -178,6 +179,24 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		DE0B67352AA5FD3A00A91FE8 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				DE0B67362AA5FD7E00A91FE8 /* MovieInfo.swift */,
+				DE0B67382AA5FD8800A91FE8 /* Movie.swift */,
+				DEE41FCF2A7C05240047F18C /* Main.storyboard */,
+				DEE41FF12A7C3A850047F18C /* SearchTableViewCell.swift */,
+				DEE41FF22A7C3A850047F18C /* SearchTableViewCell.xib */,
+				DEE41FED2A7C276D0047F18C /* DetailViewController.swift */,
+				DEE41FEB2A7C23B40047F18C /* SearchViewControllerOld.swift */,
+				DE0AFAD62A84ECDC0058BF41 /* BookOld.swift */,
+				DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */,
+				DEE41FE02A7C07020047F18C /* BookCollectionViewCell.xib */,
+				DEE41FDD2A7C06180047F18C /* BookWormCollectionViewController.swift */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
 		DEE41FBD2A7C05240047F18C = {
 			isa = PBXGroup;
 			children = (
@@ -197,31 +216,20 @@
 		DEE41FC82A7C05240047F18C /* BookWORM */ = {
 			isa = PBXGroup;
 			children = (
-				DE0B66F52AA5A0AB00A91FE8 /* Network */,
-				DE0B66F62AA5A0B400A91FE8 /* Utility */,
-				DE0B66F72AA5A0C400A91FE8 /* Base */,
-				DE0B66FA2AA5A0D900A91FE8 /* Scene */,
-				DE0B66F82AA5A0CD00A91FE8 /* View */,
-				DE0B66F92AA5A0D300A91FE8 /* Cell */,
-				DE0B66FB2AA5A0E300A91FE8 /* Realm */,
+				DE0AFAE12A84EF800058BF41 /* .gitignore */,
+				DEE41FD42A7C05250047F18C /* LaunchScreen.storyboard */,
 				DEE41FC92A7C05240047F18C /* AppDelegate.swift */,
 				DEE41FCB2A7C05240047F18C /* SceneDelegate.swift */,
-				DEE41FCF2A7C05240047F18C /* Main.storyboard */,
-				DEE41FF12A7C3A850047F18C /* SearchTableViewCell.swift */,
-				DEE41FF22A7C3A850047F18C /* SearchTableViewCell.xib */,
-				DEE41FED2A7C276D0047F18C /* DetailViewController.swift */,
-				DEE41FEB2A7C23B40047F18C /* SearchViewControllerOld.swift */,
-				DE0AFAE12A84EF800058BF41 /* .gitignore */,
-				DE0AFAD62A84ECDC0058BF41 /* BookOld.swift */,
-				DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */,
-				DEE41FE02A7C07020047F18C /* BookCollectionViewCell.xib */,
-				DEE41FDD2A7C06180047F18C /* BookWormCollectionViewController.swift */,
-				DE0AFAE32A84EFA20058BF41 /* APIKey.swift */,
-				DEE41FD22A7C05250047F18C /* Assets.xcassets */,
-				DEE41FD42A7C05250047F18C /* LaunchScreen.storyboard */,
 				DEE41FD72A7C05250047F18C /* Info.plist */,
-				DEE41FE32A7C07E40047F18C /* MovieInfo.swift */,
-				DEE41FE52A7C08160047F18C /* Movie.swift */,
+				DEE41FD22A7C05250047F18C /* Assets.xcassets */,
+				DE0B66F72AA5A0C400A91FE8 /* Base */,
+				DE0B66F92AA5A0D300A91FE8 /* Cell */,
+				DE0B66F52AA5A0AB00A91FE8 /* Network */,
+				DE0B66FB2AA5A0E300A91FE8 /* Realm */,
+				DE0B66FA2AA5A0D900A91FE8 /* Scene */,
+				DE0B66F62AA5A0B400A91FE8 /* Utility */,
+				DE0B66F82AA5A0CD00A91FE8 /* View */,
+				DE0B67352AA5FD3A00A91FE8 /* Legacy */,
 			);
 			path = BookWORM;
 			sourceTree = "<group>";
@@ -321,7 +329,6 @@
 				DE0B67142AA5AD9E00A91FE8 /* PhotoImageView.swift in Sources */,
 				DE0B67122AA5ACAA00A91FE8 /* BookCollectionViewCell.swift in Sources */,
 				DEE41FCA2A7C05240047F18C /* AppDelegate.swift in Sources */,
-				DEE41FE42A7C07E40047F18C /* MovieInfo.swift in Sources */,
 				DE0B67082AA5AB6600A91FE8 /* HomeViewController.swift in Sources */,
 				DE0B67322AA5E5DE00A91FE8 /* Book.swift in Sources */,
 				DE0B67032AA5AA4A00A91FE8 /* BaseCollectionViewCell.swift in Sources */,
@@ -329,9 +336,9 @@
 				DE0AFAD72A84ECDC0058BF41 /* BookOld.swift in Sources */,
 				DE0B67282AA5BEC900A91FE8 /* SearchViewController.swift in Sources */,
 				DEE41FE82A7C21750047F18C /* DiscoverViewController.swift in Sources */,
+				DE0B673B2AA5FD8800A91FE8 /* Movie.swift in Sources */,
 				DE0B672C2AA5C55D00A91FE8 /* CustomLabel.swift in Sources */,
 				DEE41FEC2A7C23B40047F18C /* SearchViewControllerOld.swift in Sources */,
-				DEE41FE62A7C08160047F18C /* Movie.swift in Sources */,
 				DE0B66FF2AA5A79500A91FE8 /* Color.swift in Sources */,
 				DE0B67052AA5AAD800A91FE8 /* BaseTableViewCell.swift in Sources */,
 				DE0B672E2AA5E39600A91FE8 /* APIService.swift in Sources */,
@@ -339,6 +346,7 @@
 				DEE41FDE2A7C06180047F18C /* BookWormCollectionViewController.swift in Sources */,
 				DE0AFAE42A84EFA20058BF41 /* APIKey.swift in Sources */,
 				DE0B67342AA5F5D400A91FE8 /* RealmModel.swift in Sources */,
+				DE0B67372AA5FD7E00A91FE8 /* MovieInfo.swift in Sources */,
 				DEE41FF32A7C3A850047F18C /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
