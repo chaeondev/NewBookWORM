@@ -11,7 +11,7 @@ class PhotoImageView: UIImageView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        contentMode = .scaleAspectFit
+        contentMode = .scaleAspectFill
         clipsToBounds = true
         layer.cornerRadius = 10
         layer.borderWidth = 1

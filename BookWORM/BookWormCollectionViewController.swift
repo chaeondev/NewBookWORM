@@ -61,16 +61,16 @@ class BookWormCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookCollectionViewCell", for: indexPath) as? BookCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewBookCollectionViewCell", for: indexPath) as? NewBookCollectionViewCell else {
             return UICollectionViewCell()
         }
         
         let row = movie.list[indexPath.row]
         
-        cell.configureCell(row: row)
+        //cell.configureCell(row: row)
         
         cell.likeButton.tag = indexPath.row
-        cell.likeButton.addTarget(self, action: #selector(likeButtonClicked), for: .touchUpInside)
+        //cell.likeButton.addTarget(self, action: #selector(likeButtonClicked), for: .touchUpInside)
         
         return cell
     }

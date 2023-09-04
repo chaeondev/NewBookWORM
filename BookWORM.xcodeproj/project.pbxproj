@@ -24,13 +24,13 @@
 		DE0B67202AA5B19500A91FE8 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DE0B671F2AA5B19500A91FE8 /* Realm */; };
 		DE0B67222AA5B19500A91FE8 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DE0B67212AA5B19500A91FE8 /* RealmSwift */; };
 		DE0B67252AA5B1A600A91FE8 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = DE0B67242AA5B1A600A91FE8 /* SwiftyJSON */; };
+		DE0B67282AA5BEC900A91FE8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B67272AA5BEC900A91FE8 /* SearchViewController.swift */; };
 		DEE41FCA2A7C05240047F18C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FC92A7C05240047F18C /* AppDelegate.swift */; };
 		DEE41FCC2A7C05240047F18C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FCB2A7C05240047F18C /* SceneDelegate.swift */; };
 		DEE41FD12A7C05240047F18C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE41FCF2A7C05240047F18C /* Main.storyboard */; };
 		DEE41FD32A7C05250047F18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE41FD22A7C05250047F18C /* Assets.xcassets */; };
 		DEE41FD62A7C05250047F18C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE41FD42A7C05250047F18C /* LaunchScreen.storyboard */; };
 		DEE41FDE2A7C06180047F18C /* BookWormCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FDD2A7C06180047F18C /* BookWormCollectionViewController.swift */; };
-		DEE41FE12A7C07020047F18C /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FDF2A7C07020047F18C /* BookCollectionViewCell.swift */; };
 		DEE41FE22A7C07020047F18C /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE41FE02A7C07020047F18C /* BookCollectionViewCell.xib */; };
 		DEE41FE42A7C07E40047F18C /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE32A7C07E40047F18C /* MovieInfo.swift */; };
 		DEE41FE62A7C08160047F18C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE52A7C08160047F18C /* Movie.swift */; };
@@ -53,6 +53,7 @@
 		DE0B67072AA5AB6600A91FE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DE0B67112AA5ACAA00A91FE8 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE0B67132AA5AD9E00A91FE8 /* PhotoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImageView.swift; sourceTree = "<group>"; };
+		DE0B67272AA5BEC900A91FE8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DEE41FC62A7C05240047F18C /* BookWORM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookWORM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE41FC92A7C05240047F18C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEE41FCB2A7C05240047F18C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		DEE41FD52A7C05250047F18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEE41FD72A7C05250047F18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEE41FDD2A7C06180047F18C /* BookWormCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookWormCollectionViewController.swift; sourceTree = "<group>"; };
-		DEE41FDF2A7C07020047F18C /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		DEE41FE02A7C07020047F18C /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
 		DEE41FE32A7C07E40047F18C /* MovieInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieInfo.swift; path = ../../../Week02/MovieInfo.swift; sourceTree = "<group>"; };
 		DEE41FE52A7C08160047F18C /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = ../../BOOKWARM/Movie.swift; sourceTree = "<group>"; };
@@ -134,6 +134,7 @@
 		DE0B66FA2AA5A0D900A91FE8 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				DE0B67262AA5BEB400A91FE8 /* Search */,
 				DE0B67062AA5AB5400A91FE8 /* Home */,
 			);
 			path = Scene;
@@ -152,6 +153,14 @@
 				DE0B67072AA5AB6600A91FE8 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DE0B67262AA5BEB400A91FE8 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DE0B67272AA5BEC900A91FE8 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		DEE41FBD2A7C05240047F18C = {
@@ -190,7 +199,6 @@
 				DE0AFAE12A84EF800058BF41 /* .gitignore */,
 				DE0AFAD62A84ECDC0058BF41 /* Book.swift */,
 				DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */,
-				DEE41FDF2A7C07020047F18C /* BookCollectionViewCell.swift */,
 				DEE41FE02A7C07020047F18C /* BookCollectionViewCell.xib */,
 				DEE41FDD2A7C06180047F18C /* BookWormCollectionViewController.swift */,
 				DE0AFAE32A84EFA20058BF41 /* APIKey.swift */,
@@ -302,10 +310,10 @@
 				DE0B67082AA5AB6600A91FE8 /* HomeViewController.swift in Sources */,
 				DE0B67032AA5AA4A00A91FE8 /* BaseCollectionViewCell.swift in Sources */,
 				DE0AFAD72A84ECDC0058BF41 /* Book.swift in Sources */,
+				DE0B67282AA5BEC900A91FE8 /* SearchViewController.swift in Sources */,
 				DEE41FE82A7C21750047F18C /* DiscoverViewController.swift in Sources */,
 				DEE41FEC2A7C23B40047F18C /* SearchViewController.swift in Sources */,
 				DEE41FE62A7C08160047F18C /* Movie.swift in Sources */,
-				DEE41FE12A7C07020047F18C /* BookCollectionViewCell.swift in Sources */,
 				DE0B66FF2AA5A79500A91FE8 /* Color.swift in Sources */,
 				DE0B67052AA5AAD800A91FE8 /* BaseTableViewCell.swift in Sources */,
 				DEE41FCC2A7C05240047F18C /* SceneDelegate.swift in Sources */,
@@ -463,7 +471,6 @@
 				INFOPLIST_FILE = BookWORM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -495,7 +502,6 @@
 				INFOPLIST_FILE = BookWORM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

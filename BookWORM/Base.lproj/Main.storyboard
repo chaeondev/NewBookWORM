@@ -13,7 +13,7 @@
         <!--채원님의 책장-->
         <scene sceneID="CvB-BE-SGh">
             <objects>
-                <collectionViewController storyboardIdentifier="BookWormCollectionViewController" id="j3k-Re-XqG" customClass="BookWormCollectionViewController" customModule="BookWORM" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="BookWormCollectionViewController" id="j3k-Re-XqG" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Fdp-8P-HEE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,9 +155,6 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="j3k-Re-XqG" kind="relationship" relationship="rootViewController" id="dVB-Yv-9sV"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iuu-mD-gfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
