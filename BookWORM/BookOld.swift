@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Book {
+struct BookOld {
     let title: String
     let image: String
     let authors: [String]

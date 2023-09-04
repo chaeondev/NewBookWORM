@@ -59,33 +59,33 @@ class SearchViewControllerOld: UIViewController, UISearchBarDelegate {
         let url = "https://dapi.kakao.com/v3/search/book?query=\(text)&size=25&target=title&page=\(page)"
         let header: HTTPHeaders = ["Authorization": "KakaoAK \(APIKey.kakaoKey)"]
         
-        AF.request(url, method: .get, headers: header).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-                
-                self.isEnd = json["meta"]["is_end"].boolValue
-                
-                for item in json["documents"].arrayValue {
-                    let bookName = item["title"].stringValue
-                    let bookStory = item["contents"].stringValue
-                    let bookImage = item["thumbnail"].stringValue
-                    var bookAuthor: [String] = []
-                    for author in item["authors"].arrayValue {
-                        bookAuthor.append(author.stringValue)
-                    }
-                    
-                    let data = Book(title: bookName, image: bookImage, authors: bookAuthor, contents: bookStory)
-                    self.bookList.append(data)
-                }
-                self.resultTableView.reloadData()
-
-                
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        AF.request(url, method: .get, headers: header).validate().responseJSON { response in
+//            switch response.result {
+//            case .success(let value):
+//                let json = JSON(value)
+//                print("JSON: \(json)")
+//                
+//                self.isEnd = json["meta"]["is_end"].boolValue
+//                
+//                for item in json["documents"].arrayValue {
+//                    let bookName = item["title"].stringValue
+//                    let bookStory = item["contents"].stringValue
+//                    let bookImage = item["thumbnail"].stringValue
+//                    var bookAuthor: [String] = []
+//                    for author in item["authors"].arrayValue {
+//                        bookAuthor.append(author.stringValue)
+//                    }
+//                    
+//                    let data = Book(title: bookName, image: bookImage, authors: bookAuthor, contents: bookStory)
+//                    self.bookList.append(data)
+//                }
+//                self.resultTableView.reloadData()
+//
+//                
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
 }
@@ -102,10 +102,10 @@ extension SearchViewControllerOld: UITableViewDelegate, UITableViewDataSource, U
         }
         
         let row = bookList[indexPath.row]
-        cell.titleLabel.text = row.title
-        cell.authorLabel.text = row.authors.joined(separator: " , ")
-        cell.contentsLabel.text = row.contents
-        cell.posterImageView.kf.setImage(with: URL(string: row.image))
+//        cell.titleLabel.text = row.title
+//        cell.authorLabel.text = row.authors.joined(separator: " , ")
+//        cell.contentsLabel.text = row.contents
+//        cell.posterImageView.kf.setImage(with: URL(string: row.image))
         
         return cell
     }

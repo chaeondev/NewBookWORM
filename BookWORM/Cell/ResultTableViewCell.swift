@@ -12,28 +12,24 @@ class ResultTableViewCell: BaseTableViewCell {
     
     let coverImageView = {
         let view = PhotoImageView(frame: .zero)
-        view.backgroundColor = .lightGray
         return view
     }()
     
     let titleLabel = {
         let view = CustomLabel()
         view.font = .boldSystemFont(ofSize: 15)
-        view.backgroundColor = .systemGreen
         return view
     }()
     
     let authorLabel = {
         let view = CustomLabel()
         view.font = .systemFont(ofSize: 13, weight: .semibold)
-        view.backgroundColor = .blue
         return view
     }()
     
     let priceLabel = {
         let view = CustomLabel()
         view.font = .systemFont(ofSize: 12)
-        view.backgroundColor = .brown
         view.textAlignment = .right
         return view
     }()
@@ -41,7 +37,6 @@ class ResultTableViewCell: BaseTableViewCell {
     let contentsLabel = {
         let view = CustomLabel()
         view.font = .systemFont(ofSize: 12)
-        view.backgroundColor = .cyan
         return view
     }()
     
@@ -67,22 +62,23 @@ class ResultTableViewCell: BaseTableViewCell {
             make.height.equalToSuperview().multipliedBy(0.2)
         }
         authorLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(8)
+            make.top.equalTo(titleLabel.snp.bottom).offset(4)
             make.leading.equalTo(coverImageView.snp.trailing).offset(12)
-            make.trailing.equalToSuperview().inset(12)
+            make.width.equalToSuperview().multipliedBy(0.4)
             make.height.equalToSuperview().multipliedBy(0.15)
         }
         priceLabel.snp.makeConstraints { make in
-            make.top.equalTo(authorLabel.snp.bottom).offset(4)
+            make.top.equalTo(titleLabel.snp.bottom).offset(4)
             make.trailing.equalToSuperview().inset(12)
-            make.leading.equalTo(coverImageView.snp.trailing).offset(12)
+            make.leading.equalTo(authorLabel.snp.trailing)
             make.height.equalToSuperview().multipliedBy(0.10)
+            make.centerY.equalTo(authorLabel.snp.centerY)
         }
         contentsLabel.snp.makeConstraints { make in
-            make.top.equalTo(priceLabel.snp.bottom).offset(8)
+            make.top.equalTo(authorLabel.snp.bottom).offset(8)
             make.leading.equalTo(coverImageView.snp.trailing).offset(12)
             make.trailing.equalToSuperview().inset(12)
-            make.bottom.greaterThanOrEqualToSuperview().inset(8)
+            make.bottom.lessThanOrEqualToSuperview().inset(8)
         }
         
     }
