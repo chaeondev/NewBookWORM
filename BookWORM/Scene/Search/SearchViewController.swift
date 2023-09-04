@@ -12,6 +12,7 @@ class SearchViewController: BaseViewController {
     lazy var searchBar = {
         let view = UISearchBar()
         view.placeholder = "책 제목을 입력해주세요"
+        view.showsCancelButton = true 
         view.delegate = self
         return view
     }()
@@ -113,5 +114,4 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 
-// MARK: searchBar cancel버튼 반영안됨
 // MARK: 키보드 내리는 거 구현하기
