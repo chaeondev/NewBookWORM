@@ -22,17 +22,15 @@ class NewBookCollectionViewCell: BaseCollectionViewCell {
     }()
     
     let titleLabel = {
-        let view = UILabel()
+        let view = CustomLabel()
         view.backgroundColor = .cyan
-        view.textColor = Constants.BaseColor.text
         view.font = .systemFont(ofSize: 12, weight: .semibold)
         return view
     }()
     
     let authorLabel = {
-        let view = UILabel()
+        let view = CustomLabel()
         view.backgroundColor = .gray
-        view.textColor = Constants.BaseColor.text
         view.font = .systemFont(ofSize: 10)
         return view
     }()

@@ -12,7 +12,6 @@ class HomeViewController: BaseViewController {
     
     lazy var collectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
-        view.backgroundColor = .lightGray
         view.register(NewBookCollectionViewCell.self, forCellWithReuseIdentifier: NewBookCollectionViewCell.reuseIdentifier)
         view.delegate = self
         view.dataSource = self
@@ -22,6 +21,16 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "My BookShelf"
+        navigationController?.navigationBar.tintColor = Constants.BaseColor.text
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchButtonClicked))
+        navigationItem.rightBarButtonItem?.tintColor = Constants.BaseColor.text
+    }
+    
+    @objc func searchButtonClicked() {
+        let vc = SearchViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     override func configure() {

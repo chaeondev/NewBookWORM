@@ -10,7 +10,7 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 
-class SearchViewController: UIViewController {
+class SearchViewControllerOld: UIViewController, UISearchBarDelegate {
     
 //    let totalList: [Movie] = MovieInfo().list
 //    var searchList: [Movie] = []
@@ -90,7 +90,7 @@ class SearchViewController: UIViewController {
     
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
+extension SearchViewControllerOld: UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookList.count
@@ -131,18 +131,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITa
  */
 }
 
-extension SearchViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let query = mediaSearchBar.text else { return }
-        callRequest(query: query, page: page)
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        mediaSearchBar.text = ""
-        resultTableView.reloadData()
-    }
-    
-}
+//extension SearchViewControllerOld: UISearchBarDelegate {
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        guard let query = mediaSearchBar.text else { return }
+//        callRequest(query: query, page: page)
+//    }
+//
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        mediaSearchBar.text = ""
+//        resultTableView.reloadData()
+//    }
+//
+//}
 
 
 /*

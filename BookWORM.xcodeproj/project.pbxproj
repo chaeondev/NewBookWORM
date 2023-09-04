@@ -25,6 +25,8 @@
 		DE0B67222AA5B19500A91FE8 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DE0B67212AA5B19500A91FE8 /* RealmSwift */; };
 		DE0B67252AA5B1A600A91FE8 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = DE0B67242AA5B1A600A91FE8 /* SwiftyJSON */; };
 		DE0B67282AA5BEC900A91FE8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B67272AA5BEC900A91FE8 /* SearchViewController.swift */; };
+		DE0B672A2AA5C2E400A91FE8 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B67292AA5C2E400A91FE8 /* ResultTableViewCell.swift */; };
+		DE0B672C2AA5C55D00A91FE8 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B672B2AA5C55D00A91FE8 /* CustomLabel.swift */; };
 		DEE41FCA2A7C05240047F18C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FC92A7C05240047F18C /* AppDelegate.swift */; };
 		DEE41FCC2A7C05240047F18C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FCB2A7C05240047F18C /* SceneDelegate.swift */; };
 		DEE41FD12A7C05240047F18C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE41FCF2A7C05240047F18C /* Main.storyboard */; };
@@ -35,7 +37,7 @@
 		DEE41FE42A7C07E40047F18C /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE32A7C07E40047F18C /* MovieInfo.swift */; };
 		DEE41FE62A7C08160047F18C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE52A7C08160047F18C /* Movie.swift */; };
 		DEE41FE82A7C21750047F18C /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */; };
-		DEE41FEC2A7C23B40047F18C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FEB2A7C23B40047F18C /* SearchViewController.swift */; };
+		DEE41FEC2A7C23B40047F18C /* SearchViewControllerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FEB2A7C23B40047F18C /* SearchViewControllerOld.swift */; };
 		DEE41FEE2A7C276D0047F18C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FED2A7C276D0047F18C /* DetailViewController.swift */; };
 		DEE41FF32A7C3A850047F18C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE41FF12A7C3A850047F18C /* SearchTableViewCell.swift */; };
 		DEE41FF42A7C3A850047F18C /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE41FF22A7C3A850047F18C /* SearchTableViewCell.xib */; };
@@ -54,6 +56,8 @@
 		DE0B67112AA5ACAA00A91FE8 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE0B67132AA5AD9E00A91FE8 /* PhotoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImageView.swift; sourceTree = "<group>"; };
 		DE0B67272AA5BEC900A91FE8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DE0B67292AA5C2E400A91FE8 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		DE0B672B2AA5C55D00A91FE8 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		DEE41FC62A7C05240047F18C /* BookWORM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookWORM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE41FC92A7C05240047F18C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEE41FCB2A7C05240047F18C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +70,7 @@
 		DEE41FE32A7C07E40047F18C /* MovieInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieInfo.swift; path = ../../../Week02/MovieInfo.swift; sourceTree = "<group>"; };
 		DEE41FE52A7C08160047F18C /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = ../../BOOKWARM/Movie.swift; sourceTree = "<group>"; };
 		DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
-		DEE41FEB2A7C23B40047F18C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DEE41FEB2A7C23B40047F18C /* SearchViewControllerOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerOld.swift; sourceTree = "<group>"; };
 		DEE41FED2A7C276D0047F18C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DEE41FF12A7C3A850047F18C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		DEE41FF22A7C3A850047F18C /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DE0B67132AA5AD9E00A91FE8 /* PhotoImageView.swift */,
+				DE0B672B2AA5C55D00A91FE8 /* CustomLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				DE0B67112AA5ACAA00A91FE8 /* BookCollectionViewCell.swift */,
+				DE0B67292AA5C2E400A91FE8 /* ResultTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -195,7 +201,7 @@
 				DEE41FF12A7C3A850047F18C /* SearchTableViewCell.swift */,
 				DEE41FF22A7C3A850047F18C /* SearchTableViewCell.xib */,
 				DEE41FED2A7C276D0047F18C /* DetailViewController.swift */,
-				DEE41FEB2A7C23B40047F18C /* SearchViewController.swift */,
+				DEE41FEB2A7C23B40047F18C /* SearchViewControllerOld.swift */,
 				DE0AFAE12A84EF800058BF41 /* .gitignore */,
 				DE0AFAD62A84ECDC0058BF41 /* Book.swift */,
 				DEE41FE72A7C21750047F18C /* DiscoverViewController.swift */,
@@ -309,10 +315,12 @@
 				DEE41FE42A7C07E40047F18C /* MovieInfo.swift in Sources */,
 				DE0B67082AA5AB6600A91FE8 /* HomeViewController.swift in Sources */,
 				DE0B67032AA5AA4A00A91FE8 /* BaseCollectionViewCell.swift in Sources */,
+				DE0B672A2AA5C2E400A91FE8 /* ResultTableViewCell.swift in Sources */,
 				DE0AFAD72A84ECDC0058BF41 /* Book.swift in Sources */,
 				DE0B67282AA5BEC900A91FE8 /* SearchViewController.swift in Sources */,
 				DEE41FE82A7C21750047F18C /* DiscoverViewController.swift in Sources */,
-				DEE41FEC2A7C23B40047F18C /* SearchViewController.swift in Sources */,
+				DE0B672C2AA5C55D00A91FE8 /* CustomLabel.swift in Sources */,
+				DEE41FEC2A7C23B40047F18C /* SearchViewControllerOld.swift in Sources */,
 				DEE41FE62A7C08160047F18C /* Movie.swift in Sources */,
 				DE0B66FF2AA5A79500A91FE8 /* Color.swift in Sources */,
 				DE0B67052AA5AAD800A91FE8 /* BaseTableViewCell.swift in Sources */,
