@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class MyBook: Object {
+    @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var title: String
     @Persisted var author: String
     @Persisted var coverURL: String?
@@ -20,7 +21,7 @@ class MyBook: Object {
         self.title = title
         self.author = author
         self.coverURL = coverURL
-        self.like = like
+        self.like = false
     }
     
 }

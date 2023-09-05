@@ -33,6 +33,10 @@ class SearchViewController: BaseViewController {
     var bookList: Book = Book(documents: [], meta: Meta(isEnd: false, pageableCount: 0, totalCount: 0))
     var isEnd = false
     
+    let realm = try! Realm()
+    
+    var didSelectItemHandler: ((String) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +48,8 @@ class SearchViewController: BaseViewController {
         let xmark = UIImage(systemName: "xmark")
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: xmark, style: .plain, target: self, action: #selector(closeButtonClicked))
         navigationItem.leftBarButtonItem?.tintColor = Constants.BaseColor.text
+        
+        print(realm.configuration.fileURL)
         
     }
     
@@ -100,13 +106,24 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let realm = try! Realm()
         
         let data = MyBook(title: bookList.documents[indexPath.row].title, author: bookList.documents[indexPath.row].authors.joined(separator: " , "), coverURL: bookList.documents[indexPath.row].thumbnail, like: false)
         
         try! realm.write {
             realm.add(data)
+            print("Realm Add Succeed")
         }
+
+        let value = URL(string: data.coverURL ?? "")
+        DispatchQueue.global().async {
+            if let url = value, let item = try? Data(contentsOf: url) {
+                guard let image = UIImage(data: item) else { return }
+                DispatchQueue.main.async {
+                    self.saveImageToDocument(fileName: "\(data._id).jpg", image: image)
+                }
+            }
+        }
+   
     }
     
     

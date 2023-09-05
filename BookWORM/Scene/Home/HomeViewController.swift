@@ -21,6 +21,9 @@ class HomeViewController: BaseViewController {
     }()
     
     var books: Results<MyBook>!
+
+    var imageURL: String?
+    var thumbImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()

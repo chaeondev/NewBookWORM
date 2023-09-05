@@ -13,7 +13,8 @@ enum TransitionType {
     case discover
 }
 
-class DetailViewController: UIViewController {
+class DetailViewControllerOld
+: UIViewController {
     
     static let identifier = "DetailViewController"
     
