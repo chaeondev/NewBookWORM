@@ -22,9 +22,6 @@ class HomeViewController: BaseViewController {
     
     var books: Results<MyBook>!
 
-    var imageURL: String?
-    var thumbImage: UIImage?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "My BookShelf"
@@ -77,10 +74,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         cell.titleLabel.text = data.title
         cell.authorLabel.text = data.author
-        if let url = URL(string: data.coverURL!) {
-            cell.bookImage.kf.setImage(with: url)
-        }
+        cell.bookImage.image = loadImageFromDocument(fileName: "\(data._id).jpg")
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        let data = books[indexPath.item]
+        vc.thumbImageView.image = loadImageFromDocument(fileName: "\(data._id).jpg")
+        vc.titleLabel.text = data.title
+        vc.authorLabel.text = data.author
+        vc.overViewLabel.text = data.overview
     }
     
     private func collectionViewLayout() -> UICollectionViewFlowLayout {

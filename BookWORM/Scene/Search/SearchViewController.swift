@@ -35,8 +35,6 @@ class SearchViewController: BaseViewController {
     
     let realm = try! Realm()
     
-    var didSelectItemHandler: ((String) -> Void)?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -107,7 +105,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let data = MyBook(title: bookList.documents[indexPath.row].title, author: bookList.documents[indexPath.row].authors.joined(separator: " , "), coverURL: bookList.documents[indexPath.row].thumbnail, like: false)
+        let data = MyBook(title: bookList.documents[indexPath.row].title, author: bookList.documents[indexPath.row].authors.joined(separator: " , "), coverURL: bookList.documents[indexPath.row].thumbnail, overview: bookList.documents[indexPath.row].contents, memo: nil, like: false)
         
         try! realm.write {
             realm.add(data)
