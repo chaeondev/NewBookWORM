@@ -36,7 +36,7 @@ class HomeViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        print(#function)
         collectionView.reloadData()
     }
     
@@ -86,6 +86,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         vc.titleLabel.text = data.title
         vc.authorLabel.text = data.author
         vc.overViewLabel.text = data.overview
+        vc.memoTextView.text = data.memo
+        vc.data = data
     }
     
     private func collectionViewLayout() -> UICollectionViewFlowLayout {

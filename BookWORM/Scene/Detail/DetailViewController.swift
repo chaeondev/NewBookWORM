@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DetailViewController: BaseViewController {
     
@@ -63,8 +64,52 @@ class DetailViewController: BaseViewController {
         return view
     }()
     
+    let realm = try! Realm()
+    
+    var data: MyBook?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.isToolbarHidden = false
+        self.navigationController?.toolbar.tintColor = Constants.BaseColor.point
+        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonClicked))
+        let deleteButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteButtonClicked))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        
+        self.toolbarItems = [editButton, flexibleSpace, deleteButton]
+        
+        
+    }
+    
+    @objc func editButtonClicked() {
+        
+        guard let data = data else { return }
+        
+        do {
+            try realm.write {
+                realm.create(MyBook.self, value: ["_id": data._id, "memo": memoTextView.text ?? ""], update: .modified)
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+    @objc func deleteButtonClicked() {
+        
+        guard let data = data else { return }
+        
+        removeImageFromDocument(fileName: "\(data._id).jpg")
+        
+        do {
+            try realm.write {
+                realm.delete(data)
+            }
+        } catch {
+            print(error)
+        }
+        
+        navigationController?.popViewController(animated: true)
         
     }
     

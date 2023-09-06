@@ -118,9 +118,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITa
                 guard let image = UIImage(data: item) else { return }
                 DispatchQueue.main.async {
                     self.saveImageToDocument(fileName: "\(data._id).jpg", image: image)
+                    self.dismiss(animated: true)
                 }
             }
         }
+        
+        
    
     }
     
